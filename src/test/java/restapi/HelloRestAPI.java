@@ -19,14 +19,14 @@ public class HelloRestAPI {
         RestAssured.baseURI = "http://jsonplaceholder.typicode.com";
     }
 
-    //@Test
+    @Test
     public void simpleTest() {
         given().
                 when().get("/")
                 .then().statusCode(200);
     }
 
-    //@Test
+    @Test
     public void getTest() {
 
         given().queryParam("userId", 1).
@@ -34,7 +34,7 @@ public class HelloRestAPI {
                 then().body("email", equalTo("Eliseo@gardner.biz") );
     }
 
-    //@Test
+    @Test
     public void postObject() {
 
         Post post = new Post();
@@ -51,7 +51,7 @@ public class HelloRestAPI {
         System.out.println(body);
     }
 
-    //@Test
+    @Test
     public void postString () {
 
         given().body ("{\"userId\":\"10\","
@@ -63,7 +63,7 @@ public class HelloRestAPI {
                 .post ("/posts");
     }
 
-    //@Test
+    @Test
     public void putTest() {
 
         Post post = new Post();
@@ -80,10 +80,13 @@ public class HelloRestAPI {
 
     @Test
     public void deleteTest() {
-        RestAssured.baseURI = "http://jsonplaceholder.typicode.com/posts";
+        given().pathParam("id", 1).
+            when().
+                delete("/posts/{id}").
+            then().statusCode(200);
     }
 
-    //@Test
+    @Test
     public void failedTest() {
         given().
                 when().get("/hello").
