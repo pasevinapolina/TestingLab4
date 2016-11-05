@@ -37,10 +37,12 @@
       <file leaf-file-name="HelloRestAPI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/restapi/HelloRestAPI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7774869">
-              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.46596858">
+              <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1412#1413#0" expanded="true" />
+                <element signature="e#1493#1494#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -661,23 +663,11 @@
       <created>1478347279825</created>
       <option name="number" value="Default" />
       <updated>1478347279825</updated>
-      <workItem from="1478347283881" duration="1626000" />
+      <workItem from="1478347283881" duration="3020000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="HelloRestAPI - 2016.11.05 at 15h 05m 15s.xml">
-      <configuration name="HelloRestAPI" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HelloRestAPI - 2016.11.05 at 15h 06m 00s.xml">
-      <configuration name="HelloRestAPI" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HelloRestAPI - 2016.11.05 at 15h 15m 20s.xml">
-      <configuration name="HelloRestAPI" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="HelloRestAPI - 2016.11.05 at 15h 20m 20s.xml">
-      <configuration name="HelloRestAPI" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="HelloRestAPI - 2016.11.05 at 15h 21m 57s.xml">
       <configuration name="HelloRestAPI" configurationId="JUnit" />
     </history-entry>
@@ -693,9 +683,24 @@
     <history-entry file="HelloRestAPI - 2016.11.05 at 15h 24m 22s.xml">
       <configuration name="HelloRestAPI" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="HelloRestAPI - 2016.11.05 at 15h 37m 46s.xml">
+      <configuration name="HelloRestAPI" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HelloRestAPI - 2016.11.05 at 15h 38m 37s.xml">
+      <configuration name="HelloRestAPI" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HelloRestAPI - 2016.11.05 at 15h 42m 47s.xml">
+      <configuration name="HelloRestAPI" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HelloRestAPI - 2016.11.05 at 15h 49m 54s.xml">
+      <configuration name="HelloRestAPI" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HelloRestAPI - 2016.11.05 at 15h 51m 26s.xml">
+      <configuration name="HelloRestAPI" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1626000" />
+    <option name="totallyTimeSpent" value="3020000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -742,10 +747,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/restapi/HelloRestAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7774869">
-          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.46596858">
+          <caret line="55" column="18" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1412#1413#0" expanded="true" />
+            <element signature="e#1493#1494#0" expanded="true" />
           </folding>
         </state>
       </provider>
