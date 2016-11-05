@@ -3,9 +3,9 @@ package restapi;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
-import static io.restassured.RestAssured.expect;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -14,42 +14,68 @@ import static org.hamcrest.Matchers.equalTo;
  */
 public class HelloRestAPI {
 
-    @Test
+    @BeforeClass
+    public static void setBaseURI() {
+        RestAssured.baseURI = "http://jsonplaceholder.typicode.com";
+    }
+
+    //@Test
     public void simpleTest() {
         given().
-                when().get("http://jsonplaceholder.typicode.com")
+                when().get("/")
                 .then().statusCode(200);
     }
 
-    @Test
+    //@Test
     public void getTest() {
-        RestAssured.baseURI = "http://jsonplaceholder.typicode.com/comments";
 
-        given().queryParam("id", 1).
-                when().get("1").
+        given().queryParam("userId", 1).
+                when().get("/comments/1").
                 then().body("email", equalTo("Eliseo@gardner.biz") );
     }
 
-    @Test
-    public void postTest() {
-        RestAssured.baseURI = "http://jsonplaceholder.typicode.com/posts";
+    //@Test
+    public void postObject() {
 
-        String myJson = "{\"id\":\"1\"}";
+        Post post = new Post();
+        post.id = "102";
+        post.userId = "10";
+        post.setEmail("102post@email.com");
+        post.setBody("iure\\nvoluptatem occaecati omnis eligendi aut ad\\nvoluptatem doloribus vel accusantium qu");
 
-        Response r = given()
-                .contentType("application/json").
-                        body("{\"id\":\"1\"}").
-                        when().
-                        post("");
+        Response r = given().body(post).
+                    when().contentType(ContentType.JSON).
+                        post("/posts");
 
         String body = r.getBody().asString();
         System.out.println(body);
     }
 
-    @Test
-    public void updateTest() {
-        RestAssured.baseURI = "http://jsonplaceholder.typicode.com/posts/1";
+    //@Test
+    public void postString () {
 
+        given().body ("{\"userId\":\"10\","
+                +"\"id\":\"101\","
+                +"\"email\":\"StaffWriter@mail.com\"," +
+                "\body\":\"la lal alalallalalalal\"}")
+                .when ()
+                .contentType (ContentType.JSON)
+                .post ("/posts");
+    }
+
+    //@Test
+    public void putTest() {
+
+        Post post = new Post();
+        post.setId("3");
+        post.setUserId("1");
+        post.setEmail("example@email.com");
+        post.setBody("alalalalaalla");
+
+        given().body(post).
+                when().contentType(ContentType.JSON).
+                    put("posts/3").
+                then().statusCode(200);
     }
 
     @Test
@@ -57,11 +83,10 @@ public class HelloRestAPI {
         RestAssured.baseURI = "http://jsonplaceholder.typicode.com/posts";
     }
 
-    @Test
+    //@Test
     public void failedTest() {
         given().
-                when().get("http://google.com/12").
+                when().get("/hello").
                 then().statusCode(404);
     }
-
 }
